@@ -16,6 +16,8 @@
         ar
         ar-modes="webxr scene-viewer quick-look"
         camera-controls
+        disable-zoom
+        disable-tap
         tone-mapping="neutral"
         poster="poster.webp"
         shadow-intensity="2"
@@ -26,6 +28,28 @@
         max-camera-orbit="auto 85deg auto"
         min-field-of-view="17.6deg"
       >
+        <button
+          class="hotspot"
+          slot="hotspot-2"
+          data-position="1.996160612031363m 0.7022750033813762m -0.054435603859905535m"
+          data-normal="0.9999993344700665m 0.00006130441515769179m 0.0011520855840464132m"
+        >
+          <div class="HotspotAnnotation">BBS</div></button
+        ><button
+          class="hotspot"
+          slot="hotspot-3"
+          data-position="0.8968892482182733m 0.8983068379236848m 1.5413656820260997m"
+          data-normal="-0.8786030501720397m 0.477201975189807m 0.01830177869320739m"
+        >
+          <div class="HotspotAnnotation">Wide Body</div></button
+        ><button
+          class="hotspot"
+          slot="hotspot-7"
+          data-position="1.4652889386855938m 1.0297938216736588m -0.6427020447637004m"
+          data-normal="0.0012467731785020233m -0.3791033968987003m -0.9253534784159553m"
+        >
+          <div class="HotspotAnnotation">Wing</div>
+        </button>
         <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
         </div>
@@ -36,7 +60,6 @@
         <button id="merah" data-color="#600000"></button>
         <button id="kuning" data-color="#b59700"></button>
       </div>
-      <button id="ar-button" slot="ar-button">👋 Activate AR</button>
     </div>
     <script
       type="module"

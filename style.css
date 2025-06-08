@@ -4,15 +4,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* background: #000000;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(8, 8, 8, 1) 25%,
-    rgba(23, 23, 23, 1) 50%,
-    rgba(8, 8, 8, 1) 73%,
-    rgba(0, 0, 0, 1) 100%
-  ); */
 }
 
 .container {
@@ -39,6 +30,31 @@ body {
   align-items: center;
   --poster-color: transparent;
   z-index: 2;
+}
+
+.hotspot {
+  --min-hotspot-opacity: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: aliceblue;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.HotspotAnnotation {
+  background-color: #888888;
+  position: absolute;
+  transform: translate(10px, 10px);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Hide child nodes while model-viewer loads */
+:not(:defined) > * {
+  display: none;
 }
 
 .container #ar-button {
