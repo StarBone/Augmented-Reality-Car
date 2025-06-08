@@ -115,7 +115,6 @@ hr {
   margin-top: 2rem;
   border: 2px solid black;
   border-radius: 20px;
-  height: 0.5px;
   width: 20%;
 }
 
@@ -132,9 +131,17 @@ h1 {
     flex-direction: column;
     overflow-x: hidden;
   }
+  nav #credit {
+    display: none;
+  }
+  nav #credit2.active {
+    display: none;
+  }
+  nav #credit2.active ~ #credit {
+    display: inline;
+  }
   nav #credit2 {
     margin: 1.5rem;
-    padding-right: 2rem;
   }
   .container {
     width: 100vw;
@@ -186,16 +193,4 @@ h1 {
     text-align: center;
     width: 100vw;
   }
-}
-
-nav #credit {
-  display: none;
-}
-
-nav #credit2.active {
-  display: none;
-}
-
-nav #credit2.active ~ #credit {
-  display: inline;
 }
