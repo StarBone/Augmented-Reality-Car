@@ -8,11 +8,27 @@ body {
 
 nav {
   display: flex;
+  justify-content: space-between;
 }
 
 nav img {
   padding: 1.2rem;
   height: 3rem;
+}
+
+nav #credit2 {
+  margin: 1.5rem;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: bold;
+}
+
+nav #credit {
+  margin: 1.5rem;
+  font-family: "Poppins";
+  font-size: 15px;
+  font-weight: bold;
+  display: none;
 }
 
 .container {
@@ -95,8 +111,15 @@ nav img {
   background-color: #b59700;
 }
 
+hr {
+  margin-top: 2rem;
+  border: 2px solid black;
+  border-radius: 20px;
+  height: 0.5px;
+  width: 20%;
+}
+
 h1 {
-  /* margin-top: 3rem; */
   font-family: "Roboto Mono";
   font-weight: bolder;
 }
@@ -109,28 +132,42 @@ h1 {
     flex-direction: column;
     overflow-x: hidden;
   }
-  nav img {
-    width: 40;
+  nav #credit2 {
+    margin: 1.5rem;
+    padding-right: 2rem;
   }
   .container {
     width: 100vw;
+    max-width: 100vw;
     align-items: center;
     justify-content: center;
     padding: 0;
+    box-sizing: border-box;
   }
   .container #product {
-    margin-top: 2rem !important;
-    width: 20rem;
+    margin-top: 1.5rem !important;
+    width: 90vw;
+    max-width: 320px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   .container #model-viewer {
-    height: 25vh;
+    height: 28vh;
+    margin: 1rem 0 0 0;
+    position: static;
+    display: block;
+    left: unset;
+    top: unset;
+    z-index: 1;
   }
   .color {
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-top: 8rem !important;
+    margin-top: 0 !important;
+    width: 100vw;
   }
   .color button {
     width: 30px;
@@ -140,10 +177,25 @@ h1 {
     justify-content: center;
     margin: 0;
   }
+  hr {
+    width: 40%;
+  }
   h1 {
     font-size: 1.2rem;
     margin-top: 1rem;
     text-align: center;
     width: 100vw;
   }
+}
+
+nav #credit {
+  display: none;
+}
+
+nav #credit2.active {
+  display: none;
+}
+
+nav #credit2.active ~ #credit {
+  display: inline;
 }

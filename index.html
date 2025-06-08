@@ -16,6 +16,8 @@
   <body>
     <nav>
       <img src="logo.png" alt="" />
+      <span id="credit2">Kelompok 3</span>
+      <span id="credit">Copyright by hsn</span>
     </nav>
     <section class="container">
       <img id="product" src="FairladyZ.svg" alt="" />
@@ -72,6 +74,8 @@
         <button id="kuning" data-color="#b59700"></button>
       </div>
 
+      <hr />
+
       <h1>Rp.391.818.949,57</h1>
     </section>
     <script
@@ -114,6 +118,14 @@
             b: (bigint & 255) / 255,
           };
         }
+      });
+
+      // Toggle credit2/credit on click
+      document.getElementById("credit2").addEventListener("click", function () {
+        this.classList.add("active");
+        setTimeout(() => {
+          this.classList.remove("active");
+        }, 2000); // credit tampil selama 2 detik, bisa diubah sesuai kebutuhan
       });
     </script>
   </body>
