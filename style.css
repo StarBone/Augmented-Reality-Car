@@ -133,6 +133,7 @@ h1 {
   }
   nav #credit {
     display: none;
+    text-align: end;
   }
   nav #credit2.active {
     display: none;
@@ -142,6 +143,7 @@ h1 {
   }
   nav #credit2 {
     margin: 1.5rem;
+    text-align: end;
   }
   .container {
     width: 100vw;
